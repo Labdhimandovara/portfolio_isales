@@ -26,3 +26,5 @@ dist-ssr
 # Temporary scripts
 setup_dirs.js
 setup_dirs.cjs
+
+.vercel
