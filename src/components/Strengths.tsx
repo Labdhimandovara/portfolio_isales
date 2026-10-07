@@ -1,5 +1,5 @@
 import React from 'react';
-import { Target, MessageSquareText, Send, HeartHandshake, Presentation, Users, Sparkles } from 'lucide-react';
+import { Target, MessageSquareText, Send, HeartHandshake, Presentation, Users, CheckCircle2 } from 'lucide-react';
 import { strengthsData } from '../data';
 
 export const Strengths: React.FC = () => {
@@ -47,7 +47,7 @@ export const Strengths: React.FC = () => {
                   {item.number}
                 </span>
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-paper border border-rule group-hover:scale-110 group-hover:bg-white group-hover:shadow-sm transition-all">
-                  {iconMap[item.icon] || <Sparkles className="h-5 w-5 text-blue-600" />}
+                  {iconMap[item.icon] || <CheckCircle2 className="h-5 w-5 text-blue-600" />}
                 </div>
               </div>
 

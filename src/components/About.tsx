@@ -1,5 +1,5 @@
 import React from 'react';
-import { GraduationCap, Sparkles, CheckCircle2, UserCheck, ShieldCheck } from 'lucide-react';
+import { GraduationCap, CheckCircle2, UserCheck, ShieldCheck } from 'lucide-react';
 import { personalData } from '../data';
 
 export const About: React.FC = () => {
@@ -29,7 +29,7 @@ export const About: React.FC = () => {
           {/* Left Narrative Column */}
           <div className="lg:col-span-7 space-y-6">
             <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50/80 px-3.5 py-1 font-mono text-[11px] uppercase tracking-wider text-blue-700">
-              <Sparkles className="w-3.5 h-3.5 text-blue-600" />
+              <CheckCircle2 className="w-3.5 h-3.5 text-blue-600" />
               <span>Evidence-Based Narrative</span>
             </div>
 

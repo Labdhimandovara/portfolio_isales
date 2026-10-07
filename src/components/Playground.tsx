@@ -1,37 +1,37 @@
 import React from 'react';
-import { ArrowUpRight, BookOpen, Smartphone, Mic } from 'lucide-react';
+import { ArrowUpRight, BookOpen, Smartphone, Palette } from 'lucide-react';
 
 export const Playground: React.FC = () => {
   const sidequests = [
     {
       title: "VIDAYAM Tech Magazine",
-      category: "Cover Design & Creative Direction",
+      category: "Cover Design & Publishing",
       desc: "Designed the official cover and led cross-functional publishing across faculty, writers, and designers for Symbiosis Pune.",
-      icon: <BookOpen className="w-5 h-5 text-indigo-600" />,
+      icon: <BookOpen className="w-4 h-4 text-emerald-700" />,
       tag: "Cover Designer & Head",
       image: "/vidayam_magazine_cover.jpg",
-      bgClass: "bg-emerald-950/5",
-      fitClass: "object-cover object-top"
+      bgClass: "bg-[#edf4ed]",
+      imgClass: "max-h-full max-w-full object-contain rounded-md shadow-md border border-neutral-300/80"
     },
     {
       title: "Dhan-Saarthi User Discovery",
       category: "Fintech Inclusion & 50+ UI Screens",
       desc: "Architected user workflows with empathetic financial guidance, tested across diverse student cohorts.",
-      icon: <Smartphone className="w-5 h-5 text-emerald-600" />,
+      icon: <Smartphone className="w-4 h-4 text-amber-700" />,
       tag: "Product Empathy",
       image: "/dhan_saarthi.png",
-      bgClass: "bg-amber-50/60",
-      fitClass: "object-contain p-2"
+      bgClass: "bg-[#fcf8f0]",
+      imgClass: "max-h-full max-w-full object-contain rounded-xl shadow-md border border-neutral-300/80"
     },
     {
-      title: "Multi-Language Voice Interaction",
-      category: "Conversational Research",
-      desc: "Multilingual dialogue flows across Hindi, Telugu & English for real-time speech and customer support agents.",
-      icon: <Mic className="w-5 h-5 text-rose-600" />,
-      tag: "Communication Flow",
-      image: "/voice_chatbot.png",
-      bgClass: "bg-blue-50/60",
-      fitClass: "object-contain p-2"
+      title: "Visual Arts & Storytelling",
+      category: "Fine Illustration & Creative Direction",
+      desc: "Hand-rendered graphite illustrations and visual assets developed for department publication and brand identity.",
+      icon: <Palette className="w-4 h-4 text-purple-700" />,
+      tag: "Design Head",
+      image: "/artwork2.jpg",
+      bgClass: "bg-[#f7f5f8]",
+      imgClass: "max-h-full max-w-full object-contain rounded-md shadow-md border border-neutral-300/80"
     }
   ];
 
@@ -58,7 +58,7 @@ export const Playground: React.FC = () => {
             </div>
           </div>
 
-          {/* Cards Grid with Real Visual Thumbnails */}
+          {/* Cards Grid with Perfectly Fitted & Fully Visible Images */}
           <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-5">
             {sidequests.map((item) => (
               <div
@@ -66,27 +66,28 @@ export const Playground: React.FC = () => {
                 className="group rounded-2xl border border-rule bg-paper/50 p-4 hover:bg-white hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
-                  {/* Real Image Preview */}
-                  <div className={`relative h-48 sm:h-52 w-full overflow-hidden rounded-xl border border-rule/70 mb-4 group-hover:border-rule transition-colors ${item.bgClass}`}>
+                  {/* Category & Tag Row - Positioned OUTSIDE image so nothing is covered */}
+                  <div className="flex items-center justify-between gap-2 mb-3">
+                    <div className="flex items-center gap-1.5 min-w-0">
+                      <div className="flex h-6 w-6 items-center justify-center rounded-md bg-white border border-rule shadow-2xs shrink-0">
+                        {item.icon}
+                      </div>
+                      <span className="font-mono text-[10px] text-muted truncate">
+                        {item.category}
+                      </span>
+                    </div>
+                    <span className="font-mono text-[9px] uppercase font-bold text-ink bg-white px-2 py-0.5 rounded border border-rule shrink-0 shadow-2xs">
+                      {item.tag}
+                    </span>
+                  </div>
+
+                  {/* Perfectly Fitted Image Showcase Container */}
+                  <div className={`relative h-60 sm:h-64 w-full flex items-center justify-center p-3 rounded-xl border border-rule/70 mb-4 group-hover:border-rule transition-colors overflow-hidden ${item.bgClass}`}>
                     <img
                       src={item.image}
                       alt={item.title}
-                      className={`w-full h-full ${item.fitClass} group-hover:scale-105 transition-transform duration-500`}
+                      className={`${item.imgClass} group-hover:scale-102 transition-transform duration-300`}
                     />
-                    <div className="absolute top-2.5 right-2.5">
-                      <span className="font-mono text-[10px] uppercase font-bold text-ink bg-white/95 backdrop-blur-xs px-2.5 py-0.5 rounded-full shadow-xs border border-rule/60">
-                        {item.tag}
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-2 mb-2">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white border border-rule shadow-2xs">
-                      {item.icon}
-                    </div>
-                    <span className="font-mono text-[11px] text-muted truncate">
-                      {item.category}
-                    </span>
                   </div>
 
                   <h3 className="font-serif text-lg font-normal text-ink group-hover:text-blue-600 transition-colors leading-snug">

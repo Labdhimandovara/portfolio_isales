@@ -1,12 +1,12 @@
 import React from 'react';
-import { BookOpen, Palette, Sparkles, ShieldCheck, ArrowRight } from 'lucide-react';
+import { BookOpen, Palette, Users, ShieldCheck, ArrowRight } from 'lucide-react';
 import { leadershipData } from '../data';
 
 export const Leadership: React.FC = () => {
   const iconMap: Record<string, React.ReactNode> = {
     'Department Magazine Head': <BookOpen className="w-5 h-5 text-indigo-600" />,
     'Design Head': <Palette className="w-5 h-5 text-pink-600" />,
-    'Cultural Head': <Sparkles className="w-5 h-5 text-amber-600" />,
+    'Cultural Head': <Users className="w-5 h-5 text-amber-600" />,
     'Principal Representative': <ShieldCheck className="w-5 h-5 text-emerald-600" />,
   };
 

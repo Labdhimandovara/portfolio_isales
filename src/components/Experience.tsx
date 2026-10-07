@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowUpRight, Award, Megaphone, Heart, Cpu, CheckCircle2, X } from 'lucide-react';
+import { ArrowUpRight, Award, Megaphone, Heart, Briefcase, CheckCircle2, X } from 'lucide-react';
 import { experiencesData, ExperienceItem } from '../data';
 
 export const Experience: React.FC = () => {
@@ -51,7 +51,7 @@ export const Experience: React.FC = () => {
                       {item.id === 'social-house-learning' && <Award className="w-3.5 h-3.5 text-amber-600" />}
                       {item.id === 'aiesec-marketing' && <Megaphone className="w-3.5 h-3.5 text-rose-600" />}
                       {item.id === 'akshar-bharati' && <Heart className="w-3.5 h-3.5 text-teal-600" />}
-                      {item.id === 'tech-fluency' && <Cpu className="w-3.5 h-3.5 text-blue-600" />}
+                      {item.id === 'tech-fluency' && <Briefcase className="w-3.5 h-3.5 text-blue-600" />}
                       <span>{item.organization}</span>
                     </span>
 
@@ -81,16 +81,18 @@ export const Experience: React.FC = () => {
 
                     {/* Visual Media Badge Preview */}
                     {item.id === 'social-house-learning' && (
-                      <div className="mt-4 flex items-center gap-3 rounded-xl bg-amber-50/90 p-2.5 border border-amber-200">
-                        <img
-                          src="/shl_pitch_perfect_certificate.png"
-                          alt="Pitch Perfect Certificate"
-                          className="w-14 h-10 object-contain rounded border border-amber-300 shadow-2xs bg-white"
-                        />
-                        <div>
-                          <span className="font-mono text-[10px] uppercase font-bold text-amber-900 block">Official Certificate</span>
-                          <span className="font-serif text-xs font-semibold text-ink">Runner-up "Pitch Perfect"</span>
+                      <div className="mt-4 flex items-center justify-between rounded-xl bg-amber-50/80 p-2.5 border border-amber-200">
+                        <div className="flex items-center gap-2">
+                          <span className="font-mono text-[10px] uppercase font-bold text-amber-900 bg-white px-2 py-0.5 rounded border border-amber-200">
+                            Pitch Distinction
+                          </span>
+                          <span className="font-mono text-xs text-amber-800 font-semibold">
+                            Runner-up in "Pitch Perfect"
+                          </span>
                         </div>
+                        <span className="font-mono text-[10px] text-amber-700 hidden sm:inline font-medium">
+                          Featured Case Below ↓
+                        </span>
                       </div>
                     )}
 
@@ -221,7 +223,7 @@ export const Experience: React.FC = () => {
             {selectedItem.id === 'tech-fluency' && (
               <div className="mt-4 rounded-xl border border-blue-200 bg-blue-50/60 p-4">
                 <div className="flex items-center gap-2 mb-2 font-mono text-xs font-bold text-blue-900">
-                  <Cpu className="w-4 h-4 text-blue-600" />
+                  <Briefcase className="w-4 h-4 text-blue-600" />
                   <span>Technical Domain Fluency • Edysor AI Internship</span>
                 </div>
                 <div className="grid grid-cols-2 gap-2 mt-3 text-xs font-mono">

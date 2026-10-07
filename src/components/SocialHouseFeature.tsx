@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, Trophy, Lightbulb, Users, CheckCircle, ArrowRight } from 'lucide-react';
+import { Trophy, Lightbulb, Users, CheckCircle, ArrowRight, Target } from 'lucide-react';
 
 export const SocialHouseFeature: React.FC = () => {
   const steps = [
@@ -56,7 +56,7 @@ export const SocialHouseFeature: React.FC = () => {
           {/* Left Narrative & Real Certificate Showcase */}
           <div className="lg:col-span-5 space-y-6">
             <div className="inline-flex items-center gap-2 rounded-md bg-white border border-rule px-3 py-1 font-mono text-[11px] font-bold text-ink uppercase tracking-wider">
-              <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+              <Target className="w-3.5 h-3.5 text-amber-600" />
               Direct Transferable Sales Skill
             </div>
 

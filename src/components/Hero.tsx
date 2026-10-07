@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowDown, ArrowUpRight, Send, MessageSquare, Award, Sparkles, Cpu } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, Send, MessageSquare, Presentation, Briefcase } from 'lucide-react';
 import { personalData } from '../data';
 
 interface HeroProps {
@@ -110,7 +110,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
             </div>
           </div>
 
-          {/* Right Column: VISUAL SHOWCASE STAGE (Instant Photo + Certificate + Color) */}
+          {/* Right Column: VISUAL SHOWCASE STAGE */}
           <div className="lg:col-span-5 relative mt-4 lg:mt-0">
             <div className="relative rounded-2xl border-2 border-ink bg-white p-5 sm:p-6 shadow-xl space-y-4">
               
@@ -167,22 +167,15 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                 </div>
               </div>
 
-              {/* Real Pitch Perfect Certificate Preview Ribbon */}
-              <div className="flex items-center gap-3 rounded-xl bg-amber-50/90 p-2.5 border border-amber-300">
-                <img
-                  src="/shl_pitch_perfect_certificate.png"
-                  alt="Pitch Perfect Certificate"
-                  className="w-14 h-10 object-contain rounded border border-amber-300 shadow-2xs bg-white shrink-0"
-                />
-                <div className="min-w-0">
-                  <div className="flex items-center gap-1 font-serif text-xs font-bold text-amber-900 truncate">
-                    <Award className="w-3.5 h-3.5 text-amber-600 shrink-0" />
-                    <span>Runner-up "Pitch Perfect"</span>
-                  </div>
-                  <span className="font-mono text-[10px] text-amber-700 block truncate">
-                    Social House Learning • Event Plan & Pitch
-                  </span>
+              {/* Academic & Target Credential Strip (Replaces duplicated certificate preview) */}
+              <div className="flex items-center justify-between rounded-xl bg-paper/80 p-3 border border-rule/80">
+                <div className="flex flex-col">
+                  <span className="font-mono text-[10px] uppercase text-muted font-bold">Technical Foundation</span>
+                  <span className="font-serif text-xs font-semibold text-ink">B.Tech IT • Symbiosis Pune</span>
                 </div>
+                <span className="font-mono text-xs font-bold text-forestGreen bg-emerald-50 px-2.5 py-1 rounded border border-emerald-200">
+                  8.4 CGPA
+                </span>
               </div>
 
             </div>
@@ -190,7 +183,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
 
         </div>
 
-        {/* 3 Detail Cards Stage - 100% visible side-by-side, no clipping, rich details */}
+        {/* 3 Detail Cards Stage - 100% visible side-by-side, no clipping, distinct pillars */}
         <div className="relative w-full max-w-[1240px] mt-12 pt-8 border-t border-rule">
           <div className="text-center mb-6">
             <span className="font-mono text-[11px] uppercase tracking-widest text-muted block">
@@ -251,7 +244,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
               <div>
                 <div className="flex items-center justify-between border-b border-rule pb-3">
                   <span className="flex items-center gap-1.5 font-mono text-[10px] uppercase font-bold tracking-wider text-blue-700 bg-blue-100/80 px-2.5 py-1 rounded-full border border-blue-200">
-                    <Cpu className="w-3 h-3 text-blue-600" />
+                    <Briefcase className="w-3.5 h-3.5 text-blue-600" />
                     Edysor AI Internship
                   </span>
                   <span className="font-mono text-xs font-bold text-muted">02</span>
@@ -275,7 +268,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
               </div>
             </motion.div>
 
-            {/* Card 3: Right Card - Social House Learning Pitch Perfect with Real Certificate */}
+            {/* Card 3: Right Card - Live Pitching & Presentation Skill */}
             <motion.div
               animate={{
                 y: activeCard === 2 ? -6 : 0,
@@ -289,35 +282,27 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
               <div>
                 <div className="flex items-center justify-between border-b border-rule pb-3">
                   <span className="flex items-center gap-1.5 font-mono text-[10px] uppercase font-bold tracking-wider text-amber-800 bg-amber-100/80 px-2.5 py-1 rounded-full border border-amber-300">
-                    <Award className="w-3 h-3 text-amber-600" />
-                    Social House Learning
+                    <Presentation className="w-3.5 h-3.5 text-amber-600" />
+                    Presentation & Pitching
                   </span>
                   <span className="font-mono text-xs font-bold text-muted">03</span>
                 </div>
                 <div className="mt-4">
-                  <h3 className="font-serif text-2xl font-normal text-ink">Pitch Perfect Runner-up</h3>
+                  <h3 className="font-serif text-2xl font-normal text-ink">Live Pitching & Discovery</h3>
                   <p className="mt-2 font-sans text-xs sm:text-sm text-neutral-600 leading-relaxed">
-                    Secured Runner-up in 'Pitch Perfect' experiential task for developing and presenting a comprehensive event plan with budgeting and execution.
+                    Proven ability to structure proposals, present value propositions against alternatives, and defend ideas in competitive multi-stakeholder settings.
                   </p>
                 </div>
               </div>
 
-              {/* Best Pitch Certificate Preview */}
-              <div className="mt-6 flex items-center gap-3 rounded-xl bg-amber-50/90 p-2.5 border border-amber-300">
-                <img
-                  src="/shl_pitch_perfect_certificate.png"
-                  alt="Pitch Perfect Certificate"
-                  className="w-14 h-10 object-contain rounded border border-amber-300 shadow-2xs bg-white shrink-0"
-                />
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-1 text-amber-900 font-serif text-xs font-bold truncate">
-                    <Sparkles className="w-3.5 h-3.5 text-amber-600 shrink-0" />
-                    <span>Official Merit Certificate</span>
-                  </div>
-                  <span className="font-mono text-[10px] text-amber-700 block truncate">
-                    Runner-up in "Pitch Perfect"
-                  </span>
+              <div className="mt-6 flex items-center justify-between rounded-xl bg-amber-50/80 p-3.5 border border-amber-200/70">
+                <div className="flex flex-col">
+                  <span className="font-mono text-[10px] uppercase text-amber-800 font-bold">Pitch Acumen</span>
+                  <span className="font-serif text-sm font-semibold text-ink">Value & ROI Pitching</span>
                 </div>
+                <span className="font-mono text-xs font-bold text-amber-800 bg-amber-100/90 px-2.5 py-0.5 rounded border border-amber-200">
+                  Panel Evaluated
+                </span>
               </div>
             </motion.div>
           </div>
