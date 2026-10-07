@@ -77,6 +77,21 @@ export const Leadership: React.FC = () => {
                   ))}
                 </ul>
 
+                {/* Magazine Artifact Preview */}
+                {item.role === 'Department Magazine Head' && (
+                  <div className="mt-4 flex items-center gap-3 rounded-xl bg-purple-50/70 p-2.5 border border-purple-200">
+                    <img
+                      src="/vidayam_magazine_cover.jpg"
+                      alt="VIDAYAM Magazine Cover"
+                      className="w-10 h-14 object-cover object-top rounded border border-purple-300 shadow-2xs"
+                    />
+                    <div>
+                      <span className="font-mono text-[10px] uppercase font-bold text-purple-900 block">Designed Official Cover</span>
+                      <span className="font-serif text-xs font-semibold text-ink">VIDAYAM Tech Magazine • SIT Pune</span>
+                    </div>
+                  </div>
+                )}
+
                 {/* Footer Insight */}
                 <div className="mt-6 pt-4 border-t border-rule/60 flex items-center justify-between font-mono text-xs text-muted">
                   <span>Stakeholders Coordinated</span>

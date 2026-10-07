@@ -117,16 +117,16 @@ export const experiencesData: ExperienceItem[] = [
     organization: "Social House Learning",
     role: "Intern — Outreach & Program Management",
     period: "Nov'25 – Feb'26",
-    tag: "Best Pitch Winner",
+    tag: "Pitch Perfect Runner-up",
     year: "2026",
     tagColor: "#007500",
     featured: true,
     description: [
-      "Coordinated education and skill-development initiatives through event execution, student outreach and program management.",
-      "Pitched an event concept with the team and won Best Pitch, demonstrating ideation, communication and presentation skills.",
-      "Translated program curriculum into compelling outreach messaging that drove participant attendance and positive engagement."
+      "Secured Runner-up in 'Pitch Perfect', an experiential learning task evaluating event planning, budgeting, and execution.",
+      "Developed and presented a comprehensive event plan, demonstrating structured thinking, organization, and live pitching acumen.",
+      "Coordinated student outreach initiatives, translating educational offerings into clear communication that drove engagement."
     ],
-    metrics: "Won Best Pitch Award"
+    metrics: "Runner-up in 'Pitch Perfect'"
   },
   {
     id: "aiesec-marketing",
@@ -171,8 +171,8 @@ export const experiencesData: ExperienceItem[] = [
     tagColor: "#936011",
     description: [
       "Internship at Edysor AI developing real-time AI voice agents and agentic systems with API and MCP tool integrations.",
-      "Hands-on background across software and fintech platforms (DhanSaarthi, Raya, VoiceBot) providing authentic grasp of developer and user workflows.",
-      "Able to understand product architecture and explain software value clearly to customers and non-technical stakeholders."
+      "Hands-on background across software and voice workflows providing authentic grasp of developer and user pain points.",
+      "Able to understand software architecture and communicate technical capabilities clearly to prospects and non-technical buyers."
     ],
     metrics: "Authentic Software & AI Fluency"
   }

@@ -4,12 +4,14 @@ import { ArrowUpRight, BookOpen, Smartphone, Mic } from 'lucide-react';
 export const Playground: React.FC = () => {
   const sidequests = [
     {
-      title: "Annual Department Magazine",
-      category: "Publishing & Creative Direction",
-      desc: "Cross-functional publication aligning writers, faculty & designers to meet strict print deadlines.",
+      title: "VIDAYAM Tech Magazine",
+      category: "Cover Design & Creative Direction",
+      desc: "Designed the official cover and led cross-functional publishing across faculty, writers, and designers for Symbiosis Pune.",
       icon: <BookOpen className="w-5 h-5 text-indigo-600" />,
-      tag: "Editorial Head",
-      image: "/artwork1.jpg"
+      tag: "Cover Designer & Head",
+      image: "/vidayam_magazine_cover.jpg",
+      bgClass: "bg-emerald-950/5",
+      fitClass: "object-cover object-top"
     },
     {
       title: "Dhan-Saarthi User Discovery",
@@ -17,7 +19,9 @@ export const Playground: React.FC = () => {
       desc: "Architected user workflows with empathetic financial guidance, tested across diverse student cohorts.",
       icon: <Smartphone className="w-5 h-5 text-emerald-600" />,
       tag: "Product Empathy",
-      image: "/dhan_saarthi.png"
+      image: "/dhan_saarthi.png",
+      bgClass: "bg-amber-50/60",
+      fitClass: "object-contain p-2"
     },
     {
       title: "Multi-Language Voice Interaction",
@@ -25,7 +29,9 @@ export const Playground: React.FC = () => {
       desc: "Multilingual dialogue flows across Hindi, Telugu & English for real-time speech and customer support agents.",
       icon: <Mic className="w-5 h-5 text-rose-600" />,
       tag: "Communication Flow",
-      image: "/voice_chatbot.png"
+      image: "/voice_chatbot.png",
+      bgClass: "bg-blue-50/60",
+      fitClass: "object-contain p-2"
     }
   ];
 
@@ -47,7 +53,7 @@ export const Playground: React.FC = () => {
             <div className="pt-2">
               <span className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 font-mono text-[11px] font-semibold text-emerald-800">
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-                Live UI & Editorial Artifacts
+                Real Design & Product Artifacts
               </span>
             </div>
           </div>
@@ -61,11 +67,11 @@ export const Playground: React.FC = () => {
               >
                 <div>
                   {/* Real Image Preview */}
-                  <div className="relative h-40 sm:h-44 w-full overflow-hidden rounded-xl border border-rule/70 bg-neutral-100 mb-4 group-hover:border-rule transition-colors">
+                  <div className={`relative h-48 sm:h-52 w-full overflow-hidden rounded-xl border border-rule/70 mb-4 group-hover:border-rule transition-colors ${item.bgClass}`}>
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      className={`w-full h-full ${item.fitClass} group-hover:scale-105 transition-transform duration-500`}
                     />
                     <div className="absolute top-2.5 right-2.5">
                       <span className="font-mono text-[10px] uppercase font-bold text-ink bg-white/95 backdrop-blur-xs px-2.5 py-0.5 rounded-full shadow-xs border border-rule/60">

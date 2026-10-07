@@ -83,27 +83,33 @@ export const Experience: React.FC = () => {
                     {item.id === 'social-house-learning' && (
                       <div className="mt-4 flex items-center gap-3 rounded-xl bg-amber-50/90 p-2.5 border border-amber-200">
                         <img
-                          src="/certificate_best_pitch.png"
-                          alt="Certificate"
-                          className="w-12 h-9 object-cover rounded border border-amber-300 shadow-2xs"
+                          src="/shl_pitch_perfect_certificate.png"
+                          alt="Pitch Perfect Certificate"
+                          className="w-14 h-10 object-contain rounded border border-amber-300 shadow-2xs bg-white"
                         />
                         <div>
-                          <span className="font-mono text-[10px] uppercase font-bold text-amber-900 block">Verified Distinction</span>
-                          <span className="font-serif text-xs font-semibold text-ink">Awarded Best Pitch</span>
+                          <span className="font-mono text-[10px] uppercase font-bold text-amber-900 block">Official Certificate</span>
+                          <span className="font-serif text-xs font-semibold text-ink">Runner-up "Pitch Perfect"</span>
                         </div>
                       </div>
                     )}
 
                     {item.id === 'tech-fluency' && (
-                      <div className="mt-4 flex items-center gap-3 rounded-xl bg-blue-50/90 p-2.5 border border-blue-200">
-                        <img
-                          src="/dhan_saarthi.png"
-                          alt="Fintech App UI"
-                          className="w-12 h-9 object-cover rounded border border-blue-300 shadow-2xs"
-                        />
-                        <div>
-                          <span className="font-mono text-[10px] uppercase font-bold text-blue-900 block">Product UI Discovery</span>
-                          <span className="font-serif text-xs font-semibold text-ink">50+ Screens • AI & SaaS Fluency</span>
+                      <div className="mt-4 flex flex-col gap-1.5 rounded-xl bg-blue-50/80 p-3 border border-blue-200">
+                        <div className="flex items-center justify-between">
+                          <span className="font-mono text-[10px] uppercase font-bold text-blue-900">
+                            Edysor AI Internship
+                          </span>
+                          <span className="font-mono text-[10px] text-blue-700 bg-white px-2 py-0.5 rounded border border-blue-200 font-semibold">
+                            AI Voice & MCP
+                          </span>
+                        </div>
+                        <div className="flex flex-wrap gap-1.5 pt-1">
+                          {['Real-time Voice Agents', 'MCP Integrations', 'REST APIs', 'Product Architecture'].map((tech) => (
+                            <span key={tech} className="font-mono text-[10px] text-blue-900 bg-white/90 px-2 py-0.5 rounded border border-blue-200/70">
+                              {tech}
+                            </span>
+                          ))}
                         </div>
                       </div>
                     )}
@@ -194,30 +200,40 @@ export const Experience: React.FC = () => {
 
             {/* Proof Artifact Preview in Modal */}
             {selectedItem.id === 'social-house-learning' && (
-              <div className="mt-4 rounded-xl border border-amber-300 bg-amber-50/50 p-3">
-                <div className="flex items-center gap-2 mb-2 font-mono text-xs font-bold text-amber-900">
-                  <Award className="w-4 h-4 text-amber-600" />
-                  <span>Official Best Pitch Certificate</span>
+              <div className="mt-4 rounded-xl border border-amber-300 bg-amber-50/50 p-4">
+                <div className="flex items-center justify-between mb-2">
+                  <div className="flex items-center gap-1.5 font-mono text-xs font-bold text-amber-900">
+                    <Award className="w-4 h-4 text-amber-600" />
+                    <span>Official Certificate of Merit</span>
+                  </div>
+                  <span className="font-mono text-[10px] font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded border border-emerald-300">
+                    Runner-up • "Pitch Perfect"
+                  </span>
                 </div>
                 <img
-                  src="/certificate_best_pitch.png"
-                  alt="Social House Learning Best Pitch Certificate"
-                  className="w-full max-h-52 object-contain rounded-lg border border-amber-200 bg-white"
+                  src="/shl_pitch_perfect_certificate.png"
+                  alt="Social House Learning Pitch Perfect Certificate"
+                  className="w-full max-h-64 object-contain rounded-lg border border-amber-200 bg-white shadow-xs"
                 />
               </div>
             )}
 
             {selectedItem.id === 'tech-fluency' && (
-              <div className="mt-4 rounded-xl border border-blue-300 bg-blue-50/50 p-3">
+              <div className="mt-4 rounded-xl border border-blue-200 bg-blue-50/60 p-4">
                 <div className="flex items-center gap-2 mb-2 font-mono text-xs font-bold text-blue-900">
                   <Cpu className="w-4 h-4 text-blue-600" />
-                  <span>Product Discovery Artifact (Fintech & AI Product UI)</span>
+                  <span>Technical Domain Fluency • Edysor AI Internship</span>
                 </div>
-                <img
-                  src="/dhan_saarthi.png"
-                  alt="Dhan-Saarthi App UI"
-                  className="w-full max-h-52 object-contain rounded-lg border border-blue-200 bg-white"
-                />
+                <div className="grid grid-cols-2 gap-2 mt-3 text-xs font-mono">
+                  <div className="bg-white p-2.5 rounded-lg border border-blue-100 shadow-2xs">
+                    <span className="font-bold text-blue-950 block">AI Voice Agents</span>
+                    <span className="text-muted text-[11px]">Real-time dialogue & low-latency audio pipelines</span>
+                  </div>
+                  <div className="bg-white p-2.5 rounded-lg border border-blue-100 shadow-2xs">
+                    <span className="font-bold text-blue-950 block">API & MCP Tooling</span>
+                    <span className="text-muted text-[11px]">Model Context Protocol integrations & endpoints</span>
+                  </div>
+                </div>
               </div>
             )}
 

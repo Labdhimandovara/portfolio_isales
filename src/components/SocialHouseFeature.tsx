@@ -73,23 +73,23 @@ export const SocialHouseFeature: React.FC = () => {
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-1.5 font-mono text-xs font-bold uppercase tracking-wider text-amber-900">
                   <Trophy className="w-4 h-4 text-amber-600" />
-                  <span>Official Award Certificate</span>
+                  <span>Official Certificate of Merit</span>
                 </div>
                 <span className="font-mono text-[11px] font-bold text-emerald-800 bg-emerald-100/90 px-2.5 py-0.5 rounded-full border border-emerald-300">
-                  Best Pitch distinction
+                  Runner-up • "Pitch Perfect"
                 </span>
               </div>
 
               <div className="relative overflow-hidden rounded-xl border border-amber-200/90 bg-white shadow-xs group">
                 <img
-                  src="/certificate_best_pitch.png"
-                  alt="Social House Learning Best Pitch Certificate"
-                  className="w-full h-auto object-cover group-hover:scale-102 transition-transform duration-300"
+                  src="/shl_pitch_perfect_certificate.png"
+                  alt="Social House Learning Pitch Perfect Certificate"
+                  className="w-full h-auto object-contain group-hover:scale-102 transition-transform duration-300"
                 />
               </div>
 
               <p className="font-sans text-xs text-amber-950/80 leading-relaxed">
-                Demonstrated end-to-end sales lifecycle acumen: identifying audience interest, pitching value concisely against alternatives, aligning internal peers, and executing delivery without dropped balls.
+                Awarded for outstanding performance in the "Pitch Perfect" experiential task—demonstrating strategic thinking, comprehensive event planning, budgeting, and effective pitching to a panel of executive judges.
               </p>
             </div>
           </div>
