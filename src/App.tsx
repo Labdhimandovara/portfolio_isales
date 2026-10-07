@@ -8,7 +8,6 @@ import { OutreachMetrics } from './components/OutreachMetrics';
 import { Leadership } from './components/Leadership';
 import { Achievements } from './components/Achievements';
 import { WorkingStyle } from './components/WorkingStyle';
-import { Testimonials } from './components/Testimonials';
 import { About } from './components/About';
 import { Playground } from './components/Playground';
 import { ResumeCTA } from './components/ResumeCTA';
@@ -31,7 +30,6 @@ export const App: React.FC = () => {
         <Leadership />
         <Achievements />
         <WorkingStyle />
-        <Testimonials />
         <About />
         <Playground />
         <ResumeCTA onOpenResume={() => setResumeOpen(true)} />

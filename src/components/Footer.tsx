@@ -5,7 +5,7 @@ import { personalData } from '../data';
 export const Footer: React.FC = () => {
   return (
     <footer className="band band--rule-bottom bg-[#fff5fb] text-[#da5168] overflow-hidden" id="contact">
-      <div className="band__column py-12 lg:py-16 px-6 lg:px-12 relative">
+      <div className="band__column pt-8 pb-12 lg:pt-10 lg:pb-16 px-6 lg:px-12 relative">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Left Visual Folder Art matching Reference .home2-footer__art */}
           <div className="lg:col-span-6 relative flex justify-center lg:justify-start">
@@ -39,7 +39,7 @@ export const Footer: React.FC = () => {
                     Let’s Talk.
                   </h3>
                   <p className="mt-1 font-serif text-xs text-neutral-600 leading-relaxed">
-                    Have an open Inside Sales, Business Development, or SDR opportunity? Let's connect and discuss how I can contribute to your pipeline.
+                    Have an open Tech Inside Sales, Business Development, or SDR opportunity? Let's connect and discuss how my technical foundation and communication skills fit your team.
                   </p>
                 </div>
 
@@ -48,7 +48,7 @@ export const Footer: React.FC = () => {
                     mandowaralabdhi@gmail.com
                   </span>
                   <a
-                    href={`mailto:${personalData.email}?subject=Inside%20Sales%20Role%20Inquiry`}
+                    href={`mailto:${personalData.email}?subject=Tech%20Inside%20Sales%20Inquiry`}
                     className="flex items-center gap-1 font-mono text-[11px] uppercase font-bold text-[#da5168] hover:underline"
                   >
                     <span>Send Mail</span>
