@@ -10,7 +10,6 @@ import { Achievements } from './components/Achievements';
 import { WorkingStyle } from './components/WorkingStyle';
 import { About } from './components/About';
 import { Playground } from './components/Playground';
-import { ResumeCTA } from './components/ResumeCTA';
 import { Footer } from './components/Footer';
 import { ResumeModal } from './components/ResumeModal';
 
@@ -32,10 +31,9 @@ export const App: React.FC = () => {
         <WorkingStyle />
         <About />
         <Playground />
-        <ResumeCTA onOpenResume={() => setResumeOpen(true)} />
       </main>
 
-      <Footer />
+      <Footer onOpenResume={() => setResumeOpen(true)} />
       
       <ResumeModal isOpen={resumeOpen} onClose={() => setResumeOpen(false)} />
     </div>

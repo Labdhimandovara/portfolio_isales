@@ -32,10 +32,18 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
           Tech Inside Sales • Business Development
         </div>
 
-        {/* Main Headline with Intentional Highlight Treatment */}
+        {/* Main Headline with Intentional Highlight Treatment + Labdhi Portrait Badge */}
         <div className="relative z-20 text-center max-w-4xl px-4">
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-[62px] font-light leading-[1.18] tracking-[-0.03em] text-ink">
-            <span className="block mb-2">Hi, I’m {personalData.name.split(' ')[0]}.</span>
+            <span className="inline-flex items-center justify-center gap-2.5 sm:gap-3 mb-2 flex-wrap">
+              <span>Hi, I’m {personalData.name.split(' ')[0]}.</span>
+              <img
+                src="/labdhi_profile.jpg"
+                alt="Labdhi Mandovara"
+                className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover border-2 border-white shadow-md inline-block -mt-1 hover:scale-110 transition-transform cursor-pointer"
+                title="Labdhi Mandovara"
+              />
+            </span>
             
             <span className="block mb-2">
               I understand{' '}
@@ -77,7 +85,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
             <span className="rounded-md bg-paper px-3 py-1 border border-rule">Client Communication</span>
           </div>
 
-          {/* CTA Buttons matching reference design */}
+          {/* CTA Buttons */}
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <a
               href="#contact"
@@ -106,30 +114,30 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
           </div>
         </div>
 
-        {/* 3 Rising Cards Stage - Redesigned so ALL 3 pointers are 100% visible, spaced and never overlapping */}
+        {/* 3 Rising Cards Stage - 100% visible side-by-side with rich visuals & real photos */}
         <div className="relative w-full max-w-[1240px] mt-12 px-4 sm:px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
             {/* Card 1: Left Card - Outreach & Engagement */}
             <motion.div
-              initial={animationsActive ? { y: 60, opacity: 0 } : false}
+              initial={animationsActive ? { y: 40, opacity: 0 } : false}
               animate={{
-                y: activeCard === 0 ? -12 : 0,
+                y: activeCard === 0 ? -8 : 0,
                 opacity: 1,
-                scale: activeCard === 0 ? 1.03 : 1
+                scale: activeCard === 0 ? 1.02 : 1
               }}
               transition={{
                 type: "spring",
                 damping: 20,
                 stiffness: 90,
-                delay: animationsActive ? 0.2 : 0
+                delay: animationsActive ? 0.15 : 0
               }}
               onMouseEnter={() => setActiveCard(0)}
               onMouseLeave={() => setActiveCard(null)}
-              className="relative cursor-pointer rounded-2xl border border-neutral-300/80 bg-white p-6 shadow-lg transition-all duration-300 hover:shadow-2xl flex flex-col justify-between md:-rotate-1 hover:rotate-0 hover:z-30"
+              className="relative cursor-pointer rounded-2xl border-2 border-purple-200 bg-gradient-to-b from-purple-50/60 via-white to-white p-6 shadow-md transition-all duration-300 hover:shadow-xl hover:border-purple-300 flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-center justify-between border-b border-rule pb-3">
-                  <span className="flex items-center gap-1.5 font-mono text-[10px] uppercase font-bold tracking-wider text-purple-700 bg-purple-50 px-2.5 py-1 rounded-full border border-purple-200">
+                  <span className="flex items-center gap-1.5 font-mono text-[10px] uppercase font-bold tracking-wider text-purple-700 bg-purple-100/80 px-2.5 py-1 rounded-full border border-purple-200">
                     <Send className="w-3 h-3 text-purple-600" />
                     AIESEC Outreach
                   </span>
@@ -138,39 +146,39 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                 <div className="mt-4">
                   <h3 className="font-serif text-2xl font-normal text-ink">Campus & Tech Outreach</h3>
                   <p className="mt-2 font-sans text-xs sm:text-sm text-muted leading-relaxed">
-                    Led 3+ outreach initiatives and analyzed 200+ participant feedback responses to evaluate campaign reception.
+                    Led 3+ outreach initiatives and analyzed 200+ participant feedback responses to evaluate campaign reception and improve outcomes.
                   </p>
                 </div>
               </div>
 
-              <div className="mt-6 flex items-center justify-between rounded-xl bg-paper p-3.5 border border-rule/60">
+              <div className="mt-6 flex items-center justify-between rounded-xl bg-purple-50/80 p-3.5 border border-purple-200/70">
                 <div className="flex flex-col">
-                  <span className="font-mono text-[10px] uppercase text-muted">AIESEC Marketing</span>
+                  <span className="font-mono text-[10px] uppercase text-purple-800 font-bold">AIESEC Marketing</span>
                   <span className="font-serif text-sm font-semibold text-ink">3+ Tech Campaigns</span>
                 </div>
-                <span className="font-mono text-xs font-bold text-forestGreen bg-emerald-100/70 px-2 py-0.5 rounded">
+                <span className="font-mono text-xs font-bold text-forestGreen bg-emerald-100/90 px-2.5 py-0.5 rounded border border-emerald-200">
                   200+ Feedback
                 </span>
               </div>
             </motion.div>
 
-            {/* Card 2: Center Card - Main Philosophy */}
+            {/* Card 2: Center Card - Main Philosophy with Real Photo */}
             <motion.div
-              initial={animationsActive ? { y: 60, opacity: 0 } : false}
+              initial={animationsActive ? { y: 40, opacity: 0 } : false}
               animate={{
-                y: activeCard === 1 ? -14 : 0,
+                y: activeCard === 1 ? -10 : 0,
                 opacity: 1,
-                scale: activeCard === 1 ? 1.04 : 1.01
+                scale: activeCard === 1 ? 1.03 : 1
               }}
               transition={{
                 type: "spring",
                 damping: 20,
                 stiffness: 90,
-                delay: animationsActive ? 0.35 : 0
+                delay: animationsActive ? 0.25 : 0
               }}
               onMouseEnter={() => setActiveCard(1)}
               onMouseLeave={() => setActiveCard(null)}
-              className="relative cursor-pointer rounded-2xl border-2 border-ink bg-white p-6 shadow-xl transition-all duration-300 hover:shadow-2xl flex flex-col justify-between md:-translate-y-2 hover:-translate-y-4 hover:z-30"
+              className="relative cursor-pointer rounded-2xl border-2 border-ink bg-white p-6 shadow-xl transition-all duration-300 hover:shadow-2xl flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-center justify-between border-b border-rule pb-3">
@@ -180,52 +188,65 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                   </span>
                   <span className="font-mono text-xs font-bold text-ink">02 • CORE FOCUS</span>
                 </div>
-                <div className="mt-4">
-                  <div className="inline-block rounded-md bg-warmYellow/60 px-2 py-0.5 font-mono text-[10px] font-semibold uppercase text-ink mb-1.5">
-                    Tech Inside Sales & BD
+
+                {/* Labdhi Formal Portrait Badge */}
+                <div className="mt-4 flex items-center gap-3">
+                  <img
+                    src="/labdhi_formal_blazer.png"
+                    alt="Labdhi Mandovara"
+                    className="w-12 h-12 rounded-xl object-cover object-top border-2 border-white shadow-sm ring-1 ring-neutral-300"
+                  />
+                  <div>
+                    <div className="inline-block rounded-md bg-warmYellow/70 px-2 py-0.5 font-mono text-[10px] font-semibold uppercase text-ink">
+                      Tech Inside Sales & BD
+                    </div>
+                    <div className="font-serif text-sm font-medium text-ink">Labdhi Mandovara</div>
                   </div>
+                </div>
+
+                <div className="mt-3">
                   <h3 className="font-serif text-2xl font-normal text-ink leading-snug">
                     “I understand technology, but I also enjoy the people side of it.”
                   </h3>
-                  <p className="mt-2.5 font-sans text-xs sm:text-sm text-muted leading-relaxed">
+                  <p className="mt-2 font-sans text-xs sm:text-sm text-muted leading-relaxed">
                     Hands-on background with AI voice agents (Edysor AI), software and fintech apps. Comfortable discussing architecture with technical teams and explaining value to prospects.
                   </p>
                 </div>
               </div>
 
               <div className="mt-6 grid grid-cols-2 gap-2 border-t border-rule pt-3 text-center">
-                <div className="rounded-lg bg-sky/20 p-2">
+                <div className="rounded-lg bg-sky/30 border border-sky/50 p-2">
                   <span className="block font-mono text-[10px] uppercase text-muted">Product</span>
                   <span className="font-serif text-xs sm:text-sm font-semibold text-ink">AI & SaaS Fluency</span>
                 </div>
-                <div className="rounded-lg bg-lime/30 p-2">
+                <div className="rounded-lg bg-lime/40 border border-lime/60 p-2">
                   <span className="block font-mono text-[10px] uppercase text-muted">Communication</span>
                   <span className="font-serif text-xs sm:text-sm font-semibold text-ink">Clear & Human</span>
                 </div>
               </div>
             </motion.div>
 
-            {/* Card 3: Right Card - Pitching & Presentation */}
+            {/* Card 3: Right Card - Pitching & Presentation with Real Certificate */}
             <motion.div
-              initial={animationsActive ? { y: 60, opacity: 0 } : false}
+              initial={animationsActive ? { y: 40, opacity: 0 } : false}
               animate={{
-                y: activeCard === 2 ? -12 : 0,
+                y: activeCard === 2 ? -8 : 0,
                 opacity: 1,
-                scale: activeCard === 2 ? 1.03 : 1
+                scale: activeCard === 2 ? 1.02 : 1
               }}
               transition={{
                 type: "spring",
                 damping: 20,
                 stiffness: 90,
-                delay: animationsActive ? 0.5 : 0
+                delay: animationsActive ? 0.35 : 0
               }}
               onMouseEnter={() => setActiveCard(2)}
               onMouseLeave={() => setActiveCard(null)}
-              className="relative cursor-pointer rounded-2xl border border-neutral-300/80 bg-white p-6 shadow-lg transition-all duration-300 hover:shadow-2xl flex flex-col justify-between md:rotate-1 hover:rotate-0 hover:z-30"
+              className="relative cursor-pointer rounded-2xl border-2 border-amber-300 bg-gradient-to-b from-amber-50/60 via-white to-white p-6 shadow-md transition-all duration-300 hover:shadow-xl hover:border-amber-400 flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-center justify-between border-b border-rule pb-3">
-                  <span className="flex items-center gap-1.5 font-mono text-[10px] uppercase font-bold tracking-wider text-amber-700 bg-amber-50 px-2.5 py-1 rounded-full border border-amber-200">
+                  <span className="flex items-center gap-1.5 font-mono text-[10px] uppercase font-bold tracking-wider text-amber-800 bg-amber-100/80 px-2.5 py-1 rounded-full border border-amber-300">
                     <Award className="w-3 h-3 text-amber-600" />
                     Social House Learning
                   </span>
@@ -239,20 +260,31 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                 </div>
               </div>
 
-              <div className="mt-6 flex items-center justify-between rounded-xl bg-warmYellow/30 p-3.5 border border-amber-200/60">
-                <div className="flex items-center gap-2">
-                  <Sparkles className="h-4 w-4 text-amber-600" />
-                  <span className="font-serif text-sm font-bold text-ink">"Best Pitch" Winner</span>
+              {/* Best Pitch Certificate Preview */}
+              <div className="mt-6 flex items-center gap-3 rounded-xl bg-amber-50/90 p-2.5 border border-amber-200/80">
+                <img
+                  src="/certificate_best_pitch.png"
+                  alt="Best Pitch Certificate"
+                  className="w-14 h-11 object-cover rounded-md border border-amber-300 shadow-2xs"
+                  onError={(e) => {
+                    (e.currentTarget as HTMLElement).style.display = 'none';
+                  }}
+                />
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-1 text-amber-900 font-serif text-xs font-bold truncate">
+                    <Sparkles className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+                    <span>"Best Pitch" Winner</span>
+                  </div>
+                  <span className="font-mono text-[10px] text-amber-700 block truncate">
+                    Social House Learning
+                  </span>
                 </div>
-                <span className="font-mono text-[10px] uppercase font-bold text-amber-900 bg-white px-2 py-0.5 rounded shadow-xs">
-                  Awarded
-                </span>
               </div>
             </motion.div>
           </div>
         </div>
 
-        {/* Animations Active / Paused Controller matching Reference */}
+        {/* Animations Active / Paused Controller */}
         <div className="relative z-30 mt-10 text-center">
           <button
             type="button"

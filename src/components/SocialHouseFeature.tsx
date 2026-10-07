@@ -51,8 +51,9 @@ export const SocialHouseFeature: React.FC = () => {
 
       {/* Main Content Showcase */}
       <div className="band__column py-12 lg:py-16 px-6 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          {/* Left Narrative Block */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+          
+          {/* Left Narrative & Real Certificate Showcase */}
           <div className="lg:col-span-5 space-y-6">
             <div className="inline-flex items-center gap-2 rounded-md bg-white border border-rule px-3 py-1 font-mono text-[11px] font-bold text-ink uppercase tracking-wider">
               <Sparkles className="w-3.5 h-3.5 text-amber-600" />
@@ -63,29 +64,40 @@ export const SocialHouseFeature: React.FC = () => {
               Translating raw concepts into high-converting presentations and seamless delivery.
             </h3>
 
-            <p className="font-sans text-sm text-muted leading-relaxed">
+            <p className="font-sans text-sm text-neutral-600 leading-relaxed">
               "Developed and presented an event concept with the team, translating an idea into a structured proposal and winning Best Pitch."
             </p>
 
-            <div className="rounded-xl border border-rule bg-white p-5 shadow-sm space-y-3">
+            {/* Official Certificate Box */}
+            <div className="rounded-2xl border-2 border-amber-300 bg-amber-50/70 p-4 shadow-sm space-y-3">
               <div className="flex items-center justify-between">
-                <span className="font-mono text-xs uppercase tracking-wider text-muted font-bold">
-                  Key Capability Demonstrated
-                </span>
-                <span className="font-mono text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">
-                  First Prize
+                <div className="flex items-center gap-1.5 font-mono text-xs font-bold uppercase tracking-wider text-amber-900">
+                  <Trophy className="w-4 h-4 text-amber-600" />
+                  <span>Official Award Certificate</span>
+                </div>
+                <span className="font-mono text-[11px] font-bold text-emerald-800 bg-emerald-100/90 px-2.5 py-0.5 rounded-full border border-emerald-300">
+                  Best Pitch distinction
                 </span>
               </div>
-              <p className="font-sans text-xs text-ink/80 leading-relaxed">
+
+              <div className="relative overflow-hidden rounded-xl border border-amber-200/90 bg-white shadow-xs group">
+                <img
+                  src="/certificate_best_pitch.png"
+                  alt="Social House Learning Best Pitch Certificate"
+                  className="w-full h-auto object-cover group-hover:scale-102 transition-transform duration-300"
+                />
+              </div>
+
+              <p className="font-sans text-xs text-amber-950/80 leading-relaxed">
                 Demonstrated end-to-end sales lifecycle acumen: identifying audience interest, pitching value concisely against alternatives, aligning internal peers, and executing delivery without dropped balls.
               </p>
             </div>
           </div>
 
           {/* Right Visual Workflow Steps */}
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-7 space-y-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {steps.map((s, idx) => (
+              {steps.map((s) => (
                 <div
                   key={s.step}
                   className="group relative rounded-2xl border border-rule bg-white p-6 shadow-sm hover:shadow-md transition-all hover:-translate-y-1"
@@ -103,21 +115,15 @@ export const SocialHouseFeature: React.FC = () => {
                     {s.title}
                   </h4>
 
-                  <p className="mt-2 font-sans text-xs text-muted leading-relaxed">
+                  <p className="mt-2 font-sans text-xs text-neutral-600 leading-relaxed">
                     {s.desc}
                   </p>
-
-                  {idx < steps.length - 1 && (
-                    <div className="hidden sm:block absolute -right-3 top-1/2 -translate-y-1/2 z-10">
-                      {/* Arrow indicator between steps if desired */}
-                    </div>
-                  )}
                 </div>
               ))}
             </div>
 
             {/* Linear Step Progression Summary Bar */}
-            <div className="mt-6 flex flex-wrap items-center justify-between gap-2 rounded-xl border border-rule bg-white px-5 py-3 font-mono text-xs">
+            <div className="flex flex-wrap items-center justify-between gap-2 rounded-xl border border-rule bg-white px-5 py-3 font-mono text-xs shadow-2xs">
               <span className="font-bold text-ink">Journey Path:</span>
               <div className="flex items-center gap-2 text-muted">
                 <span className="text-ink font-semibold">IDEA</span>
@@ -130,6 +136,7 @@ export const SocialHouseFeature: React.FC = () => {
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>

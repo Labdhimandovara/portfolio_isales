@@ -61,7 +61,7 @@ export const Experience: React.FC = () => {
                   </div>
 
                   {/* Center Content Card Banner */}
-                  <div className="my-auto z-10 max-w-lg">
+                  <div className="my-auto z-10 max-w-lg w-full">
                     <div className="inline-block rounded-md bg-white/80 border border-rule/70 px-2.5 py-1 font-mono text-[11px] font-bold uppercase tracking-wider text-ink mb-2">
                       {item.role}
                     </div>
@@ -78,6 +78,57 @@ export const Experience: React.FC = () => {
                         </li>
                       ))}
                     </ul>
+
+                    {/* Visual Media Badge Preview */}
+                    {item.id === 'social-house-learning' && (
+                      <div className="mt-4 flex items-center gap-3 rounded-xl bg-amber-50/90 p-2.5 border border-amber-200">
+                        <img
+                          src="/certificate_best_pitch.png"
+                          alt="Certificate"
+                          className="w-12 h-9 object-cover rounded border border-amber-300 shadow-2xs"
+                        />
+                        <div>
+                          <span className="font-mono text-[10px] uppercase font-bold text-amber-900 block">Verified Distinction</span>
+                          <span className="font-serif text-xs font-semibold text-ink">Awarded Best Pitch</span>
+                        </div>
+                      </div>
+                    )}
+
+                    {item.id === 'tech-fluency' && (
+                      <div className="mt-4 flex items-center gap-3 rounded-xl bg-blue-50/90 p-2.5 border border-blue-200">
+                        <img
+                          src="/dhan_saarthi.png"
+                          alt="Fintech App UI"
+                          className="w-12 h-9 object-cover rounded border border-blue-300 shadow-2xs"
+                        />
+                        <div>
+                          <span className="font-mono text-[10px] uppercase font-bold text-blue-900 block">Product UI Discovery</span>
+                          <span className="font-serif text-xs font-semibold text-ink">50+ Screens • AI & SaaS Fluency</span>
+                        </div>
+                      </div>
+                    )}
+
+                    {item.id === 'aiesec-marketing' && (
+                      <div className="mt-4 flex items-center gap-2 rounded-xl bg-purple-50/80 p-2.5 border border-purple-200">
+                        <span className="font-mono text-[10px] uppercase font-bold text-purple-900 bg-white px-2 py-0.5 rounded border border-purple-200">
+                          AIESEC
+                        </span>
+                        <span className="font-mono text-xs text-purple-800 font-semibold">
+                          3+ Campaigns • 200+ Survey Responses Evaluated
+                        </span>
+                      </div>
+                    )}
+
+                    {item.id === 'akshar-bharati' && (
+                      <div className="mt-4 flex items-center gap-2 rounded-xl bg-teal-50/80 p-2.5 border border-teal-200">
+                        <span className="font-mono text-[10px] uppercase font-bold text-teal-900 bg-white px-2 py-0.5 rounded border border-teal-200">
+                          Outreach
+                        </span>
+                        <span className="font-mono text-xs text-teal-800 font-semibold">
+                          10+ School Visits • 3+ Fundraising Drives
+                        </span>
+                      </div>
+                    )}
                   </div>
 
                   {/* Bottom Highlight Strip */}
@@ -140,6 +191,35 @@ export const Experience: React.FC = () => {
             <p className="mt-1 font-mono text-xs text-muted">
               {selectedItem.role} | {selectedItem.period}
             </p>
+
+            {/* Proof Artifact Preview in Modal */}
+            {selectedItem.id === 'social-house-learning' && (
+              <div className="mt-4 rounded-xl border border-amber-300 bg-amber-50/50 p-3">
+                <div className="flex items-center gap-2 mb-2 font-mono text-xs font-bold text-amber-900">
+                  <Award className="w-4 h-4 text-amber-600" />
+                  <span>Official Best Pitch Certificate</span>
+                </div>
+                <img
+                  src="/certificate_best_pitch.png"
+                  alt="Social House Learning Best Pitch Certificate"
+                  className="w-full max-h-52 object-contain rounded-lg border border-amber-200 bg-white"
+                />
+              </div>
+            )}
+
+            {selectedItem.id === 'tech-fluency' && (
+              <div className="mt-4 rounded-xl border border-blue-300 bg-blue-50/50 p-3">
+                <div className="flex items-center gap-2 mb-2 font-mono text-xs font-bold text-blue-900">
+                  <Cpu className="w-4 h-4 text-blue-600" />
+                  <span>Product Discovery Artifact (Fintech & AI Product UI)</span>
+                </div>
+                <img
+                  src="/dhan_saarthi.png"
+                  alt="Dhan-Saarthi App UI"
+                  className="w-full max-h-52 object-contain rounded-lg border border-blue-200 bg-white"
+                />
+              </div>
+            )}
 
             <div className="mt-6 border-t border-rule pt-4">
               <h4 className="font-mono text-xs uppercase tracking-wider text-muted mb-3">
