@@ -19,15 +19,15 @@ export interface PersonalData {
 
 export const personalData: PersonalData = {
   name: "Labdhi Mandovara",
-  role: "Inside Sales Specialist",
-  organizationFocus: "Client Growth & BD",
-  headline: "Turning Conversations Into Opportunities.",
-  subtitle: "Inside Sales and Business Development professional focused on building relationships, understanding customer needs and creating meaningful growth opportunities.",
-  secondaryPositioning: "Communication • Outreach • Relationship Building • Business Growth",
+  role: "Tech Inside Sales & Business Development",
+  organizationFocus: "SaaS & AI Products",
+  headline: "I understand the product. I know how to start the conversation.",
+  subtitle: "I come from a technical background, with experience in outreach, pitching, events and student engagement. I’m interested in Tech Inside Sales and Business Development, where understanding the product is just as important as understanding the person you’re speaking with.",
+  secondaryPositioning: "Technical Understanding • Outreach • Pitching • Client Communication",
   email: "mandowaralabdhi@gmail.com",
   linkedin: "https://www.linkedin.com/in/labdhi-mandovara-047561278/",
   github: "https://github.com/Labdhimandovara",
-  aboutIntro: "From student outreach and marketing initiatives to event coordination and team leadership, I have consistently worked at the intersection of communication, people and execution.",
+  aboutIntro: "I understand technology, but I also enjoy the people side of it. From working on real-time voice agents at Edysor AI and multi-channel outreach at AIESEC to pitching event concepts and leading teams, I combine technical product grasp with human communication.",
   education: [
     {
       degree: "B.Tech in Information Technology",
@@ -162,19 +162,19 @@ export const experiencesData: ExperienceItem[] = [
   },
   {
     id: "tech-fluency",
-    title: "Tech-Fluent Sales Advantage (SaaS & B2B Acumen)",
-    organization: "Technical Foundation",
-    role: "Domain Fluency & Product Storytelling",
+    title: "Technical Understanding for SaaS & AI Products",
+    organization: "Edysor AI & Tech Foundation",
+    role: "AI Voice Agents & API Integrations",
     period: "2024 – Present",
-    tag: "B2B Domain Literacy",
+    tag: "Technical Understanding",
     year: "2026",
     tagColor: "#936011",
     description: [
-      "Leverages an engineering background to speak the language of technical prospects, architects, and engineering decision makers.",
-      "Translates complex technical capabilities (commerce layers, fintech APIs, conversational AI) into plain-English business ROI.",
-      "Acts as a seamless bridge between client expectations, engineering constraints, and product value."
+      "Internship at Edysor AI developing real-time AI voice agents and agentic systems with API and MCP tool integrations.",
+      "Hands-on background across software and fintech platforms (DhanSaarthi, Raya, VoiceBot) providing authentic grasp of developer and user workflows.",
+      "Able to understand product architecture and explain software value clearly to customers and non-technical stakeholders."
     ],
-    metrics: "Technical Empathy for Enterprise Buyers"
+    metrics: "Authentic Software & AI Fluency"
   }
 ];
 

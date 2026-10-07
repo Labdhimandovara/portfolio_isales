@@ -44,7 +44,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
               {personalData.name}
             </span>
             <span className="font-mono text-[10px] uppercase tracking-wider text-muted">
-              Inside Sales & BD
+              Tech Inside Sales & BD
             </span>
           </div>
         </a>
